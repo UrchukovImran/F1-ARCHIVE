@@ -1,0 +1,962 @@
+.car-info-block {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.car-info-block .about-text {
+    position: relative;
+    font-size: 300px;
+    color: #00A19B;
+    text-shadow: 0 0 10px #00A19B;
+}
+
+
+.about-text-line {
+    position: absolute;
+    bottom: 0;
+    border: 3px solid #00A19B;
+    box-shadow: 0 0 10px #00A19B;
+    left: 10%;
+    right: 10%;
+    border-radius: 10px;
+    animation: line-anim 3s ease-in-out 1;
+}
+
+.car-info-block .car-above {
+    width: 850px;
+    height: 1250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.car-info-block .car-above img {
+    width: 100%;
+    height: 100%;
+}
+
+.car-info-block .of-on-but {
+    margin: 50px;
+}
+
+.car-info-block .of-on-but button {
+    font-family: Unity Sans TT Regular;
+    border: none;
+    width: 300px;
+    height: 100px;
+    background-color: transparent;
+    border: 6px solid #00A19B;
+    box-shadow: 0 0 10px #00A19B;
+    text-shadow: 0 0 4px #00A19B;
+    border-radius: 50px;
+    color: #00A19B;
+    font-size: 40px;
+    filter: blur(3px);
+    transform: scale(0.7);
+    transition: filter 0.3s, transform 0.3s, box-shadow 0.3s, text-shadow 0.3s;
+}
+
+.car-info-block .of-on-but button:hover {
+    filter: none;
+    transform: scale(1);
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.car-info-block .of-on-but button:active {
+    box-shadow: none;
+    text-shadow: none;
+    transform: scale(0.9);
+    transition: all 0.3s;
+}
+
+.car-above .front-wing-line {
+    position: absolute;
+    text-align: left;
+    color: white;
+    top: 7%;
+    left: -15%;
+    right: 60%;
+    border-bottom: 2px solid white;
+    font-size: 25px;
+    z-index: -1;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.car-above .front-wing {
+    position: absolute;
+    top: 2%;
+    width: 45%;
+    height: 12%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.car-above .front-wing:hover+.front-wing-line {
+    animation: front-wing-anim 1s ease-in-out 1 both;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+@keyframes front-wing-anim {
+    0% {
+        right: 100%;
+    }
+
+    100% {
+        right: 60%;
+    }
+}
+
+
+
+.car-above .left-front-tire-line {
+    position: absolute;
+    text-align: left;
+    color: white;
+    white-space: nowrap;
+    top: 20%;
+    left: -15%;
+    right: 65%;
+    border-bottom: 2px solid white;
+    font-size: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.car-above .left-front-tire {
+    position: absolute;
+    width: 10%;
+    height: 13%;
+    top: 17%;
+    left: 22%;
+}
+
+.car-above .left-front-tire:hover+.left-front-tire-line {
+    animation: left-front-tire-anim 1s ease-in-out 1 both;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+
+@keyframes left-front-tire-anim {
+    0% {
+        right: 100%;
+    }
+
+    100% {
+        right: 60%;
+    }
+}
+
+
+
+
+
+
+.car-above .right-front-tire-line {
+    position: absolute;
+    text-align: right;
+    color: white;
+    white-space: nowrap;
+    top: 20%;
+    right: -20%;
+    left: 65%;
+    border-bottom: 2px solid white;
+    font-size: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.car-above .right-front-tire {
+    position: absolute;
+    width: 10%;
+    height: 13%;
+    top: 17%;
+    right: 22%;
+}
+
+.car-above .right-front-tire:hover+.right-front-tire-line {
+    animation: right-front-tire-anim 1s ease-in-out 1 both;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+
+@keyframes right-front-tire-anim {
+    0% {
+        right: -20%;
+        left: 85%;
+    }
+
+    100% {
+        right: -20%;
+        left: 60%;
+    }
+}
+
+.car-above .left-rear-tire-line {
+    position: absolute;
+    position: absolute;
+    text-align: left;
+    color: white;
+    white-space: nowrap;
+    bottom: 14%;
+    left: -15%;
+    right: 60%;
+    border-bottom: 2px solid white;
+    font-size: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.car-above .left-rear-tire {
+    position: absolute;
+    width: 13%;
+    height: 12%;
+    bottom: 14%;
+    left: 21%;
+    top:80%;
+
+}
+
+.car-above .left-rear-tire:hover+.left-rear-tire-line {
+    animation: left-rear-tire-anim 1s ease-in-out 1 both;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+@keyframes left-rear-tire-anim {
+    0% {
+        right: 100%;
+    }
+
+    100% {
+        right: 60%;
+    }
+}
+
+
+.car-above .right-rear-tire-line {
+    position: absolute;
+    text-align: right;
+    color: white;
+    white-space: nowrap;
+    bottom: 14%;
+    right: -20%;
+    left: 65%;
+    border-bottom: 2px solid white;
+    font-size: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.car-above .right-rear-tire {
+    position: absolute;
+    width: 13%;
+    height: 12%;
+    bottom: 14%;
+    right: 21%;
+    top:80%;
+
+}
+.car-above .right-rear-tire:hover+.right-rear-tire-line {
+    animation: right-front-tire-anim 1s ease-in-out 1 both;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+
+@keyframes right-rear-tire-anim {
+    0% {
+        right: -10%;
+        left: 85%;
+    }
+
+    100% {
+        right: -15%;
+        left: 60%;
+    }
+}
+
+.car-above .halo-line {
+    position: absolute;
+    text-align: left;
+    color: white;
+    border-bottom: 3px solid white;
+    left: -15%;
+    right: 50%;
+    font-size: 25px;
+    top: 40%;
+    opacity: 0;
+}
+
+
+.car-above .halo-1 {
+    position: absolute;
+    left: 58%;
+    height: 5%;
+    width: 2%;
+}
+
+.car-above .halo-2 {
+    position: absolute;
+    right: 58%;
+    height: 5%;
+    width: 2%;
+}
+
+.car-above .halo-3 {
+    position: absolute;
+    right: 57%;
+    height: 4%;
+    width: 1.6%;
+    top: 46%;
+    transform: rotate(20deg);
+    border-top-left-radius: 60%;
+}
+
+.car-above .halo-4 {
+    position: absolute;
+    left: 57%;
+    height: 4%;
+    width: 1.6%;
+    top: 46%;
+    transform: rotate(-20deg);
+    border-top-right-radius: 60%;
+}
+
+.car-above .halo-5 {
+    position: absolute;
+    right: 54%;
+    height: 5%;
+    width: 2%;
+    top: 42%;
+    transform: rotate(50deg);
+    border-bottom-left-radius: 50%;
+}
+
+.car-above .halo-6 {
+    position: absolute;
+    left: 52.6%;
+    height: 5%;
+    width: 2%;
+    top: 42%;
+    transform: rotate(-50deg);
+    border-bottom-right-radius: 50%;
+}
+
+.car-above .halo-7 {
+    position: absolute;
+    left: 47.5%;
+    height: 3%;
+    width: 4%;
+    top: 41%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.car-above .halo-8 {
+    position: absolute;
+    left: 49%;
+    height: 5%;
+    width: 1%;
+    top: 37%;
+}
+
+.car-above .halo:hover+.halo-line {
+    animation: halo-anim 1s ease-in-out 1 both;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+@keyframes halo-anim {
+    0% {
+        left: -15%;
+        right: 110%;
+    }
+
+    100% {
+        left: -15%;
+        right: 50%;
+    }
+}
+
+.car-above .cockpit-line {
+    position: absolute;
+    text-align: left;
+    color: white;
+    top: 45%;
+    left: -15%;
+    right: 50%;
+    border-bottom: 3px solid white;
+    font-size: 25px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.car-above .cockpit {
+    position: absolute;
+    top: 46%;
+    width: 8%;
+    height: 8.6%;
+    left: 45.7%;
+    border-radius: 20%;
+}
+
+.car-above .cockpit:hover+.cockpit-line {
+    animation: cockpit-anim 1s ease-in-out 1 both;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+@keyframes cockpit-anim {
+    0% {
+        right: 100%;
+    }
+
+    100% {
+        right: 50%;
+    }
+}
+
+.car-above .rear-wing-line {
+    position: absolute;
+    text-align: left;
+    color: white;
+    bottom: 5%;
+    left: -15%;
+    right: 60%;
+    border-bottom: 3px solid white;
+    font-size: 25px;
+    z-index: -1;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.car-above .rear-wing {
+    position: absolute;
+    bottom: 2%;
+    width: 29%;
+    height: 9%;
+    left: 35%;
+}
+
+.car-above .rear-wing:hover+.rear-wing-line {
+    animation: rear-wing-anim 1s ease-in-out 1 both;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+@keyframes rear-wing-anim {
+    0% {
+        right: 100%;
+    }
+
+    100% {
+        right: 60%;
+    }
+}
+
+.car-line {
+    position: absolute;
+    bottom: -5%;
+    border: 3px solid #00A19B;
+    box-shadow: 0 0 10px #00A19B;
+    left: 10%;
+    right: 10%;
+    border-radius: 10px;
+    animation: car-line-anim 3s ease-in-out 1;
+}
+
+@keyframes car-line-anim {
+    0% {
+        opacity: 0;
+        left: 50%;
+        right: 50%;
+    }
+
+    100% {
+        opacity: 1;
+        left: 10%;
+        right: 10%;
+    }
+}
+
+
+
+
+/* Lines visible mode - when button is clicked */
+.car-above.lines-visible [class*="-line"] {
+    opacity: 1 !important;
+    animation: none !important;
+}
+
+.car-above.lines-visible [class*="-tire"]:hover+[class*="-line"],
+.car-above.lines-visible [class*="-wing"]:hover+[class*="-line"],
+.car-above.lines-visible .cockpit:hover+.cockpit-line,
+.car-above.lines-visible .halo:hover+.halo-line {
+    animation: none !important;
+    opacity: 1 !important;
+}
+
+@media (max-width: 576px) {
+    .car-info-block {
+        margin-top: 70px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .car-info-block .about-text {
+        font-size: 90px;
+    }
+
+    .car-info-block .about-text .adap {
+        display: block;
+    }
+
+    .about-text-line {
+        position: absolute;
+        bottom: 0;
+        border: 3px solid  #00A19B;
+        box-shadow: 0 0 10px #00A19B;
+        left: 0;
+        right: 0;
+        border-radius: 10px;
+        animation: about-text-line-anim 3s ease-in-out 1;
+    }
+
+    @keyframes about-text-line-anim {
+        0% {
+            opacity: 0;
+            left: 50%;
+            right: 50%;
+        }
+
+        100% {
+            opacity: 1;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    .car-info-block .car-above {
+        width: min(100%, 420px);
+        height: 600px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+
+    .car-info-block .of-on-but button {
+        font-family: Unity Sans TT Regular;
+        border: none;
+        width: 300px;
+        height: 100px;
+        background-color: transparent;
+        border: 6px solid #00A19B;
+        box-shadow: 0 0 10px #00A19B;
+        text-shadow: 0 0 4px #00A19B;
+        border-radius: 50px;
+        color: #00A19B;
+        font-size: 40px;
+        transform: scale(1);
+        filter: blur(0);
+        transition: filter 0.3s, transform 0.3s, box-shadow 0.3s, text-shadow 0.3s;
+    }
+
+    .car-info-block .of-on-but button:hover {
+        transform: scale(1);
+        transition: filter 0.3s, transform 0.3s;
+    }
+
+    .car-info-block .of-on-but button:active {
+        box-shadow: none;
+        text-shadow: none;
+        transform: scale(0.9);
+        transition: all 0.3s;
+    }
+
+    .car-above .front-wing-line {
+        position: absolute;
+        text-align: left;
+        color: white;
+        top: 8%;
+        left: 0;
+        right: 60%;
+        border-bottom: 1px solid white;
+        font-size: 7px;
+        z-index: -1;
+        white-space: none;
+        opacity: 0;
+    }
+
+    .car-above .front-wing {
+        position: absolute;
+        top: 1%;
+        width: 45%;
+        height: 12%;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+    }
+
+    .car-above .front-wing:hover +.front-wing-line {
+        animation: front-wing-adaptive-anim 1s ease-in-out 1 both;
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+
+    @keyframes front-wing-adaptive-anim {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .car-above .left-front-tire-line {
+        position: absolute;
+        text-align: left;
+        color: white;
+        white-space: nowrap;
+        top: 23%;
+        left: 5%;
+        right: 60%;
+        border-bottom: 1px solid white;
+        font-size: 7px;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .car-above .left-front-tire {
+        position: absolute;
+        width: 12%;
+        height: 11%;
+        top: 17%;
+        left: 20%;
+    }
+
+    .car-above .left-front-tire:hover +.left-front-tire-line {
+        animation: left-front-tire-adaptive-anim 1s ease-in-out 1 both;
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+
+    @keyframes left-front-tire-adaptive-anim {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .car-above .right-front-tire-line {
+        position: absolute;
+        text-align: right;
+        color: white;
+        white-space: nowrap;
+        top: 23%;
+        right: 5%;
+        left: 60%;
+        border-bottom: 1px solid white;
+        font-size: 7px;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .car-above .right-front-tire {
+        position: absolute;
+        width: 8%;
+        height: 11%;
+        top: 20%;
+        right: 27%;
+    }
+
+    .car-above .right-front-tire:hover +.right-front-tire-line {
+        animation: right-front-tire-adaptive-anim 1s ease-in-out 1 both;
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+
+    @keyframes right-front-tire-adaptive-anim {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .car-above .left-rear-tire-line {
+        position: absolute;
+        text-align: left;
+        color: white;
+        white-space: nowrap;
+        bottom: 15%;
+        left: 5%;
+        right: 60%;
+        border-bottom: 1px solid white;
+        font-size: 7px;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .car-above .left-rear-tire {
+        position: absolute;
+        width: 10%;
+        height: 11.5%;
+        bottom: 13%;
+        left: 22%;
+    }
+
+    .car-above .left-rear-tire:hover +.left-rear-tire-line {
+        animation: left-rear-tire-adaptive-anim 1s ease-in-out 1 both;
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+
+    @keyframes left-rear-tire-adaptive-anim {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .car-above .right-rear-tire-line {
+        position: absolute;
+        text-align: right;
+        color: white;
+        white-space: nowrap;
+        bottom: 15%;
+        right: 5%;
+        left: 60%;
+        border-bottom: 1px solid white;
+        font-size: 7px;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .car-above .right-rear-tire {
+        position: absolute;
+        width: 10%;
+        height: 11.5%;
+        bottom: 13%;
+        right: 22%;
+        
+    }
+
+    .car-above .right-rear-tire:hover +.right-rear-tire-line {
+        animation: right-front-tire-adaptive-anim 1s ease-in-out 1 both;
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+
+    @keyframes right-rear-tire-adaptive-anim {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .car-above .halo-line {
+        position: absolute;
+        text-align: left;
+        color: white;
+        border-bottom: 1px solid white;
+        left: 5%;
+        right: 50%;
+        font-size: 7px;
+        top: 41%;
+        opacity: 0;
+    }
+
+    .car-above .halo-1 {
+        position: absolute;
+        left: 58%;
+        height: 5%;
+        width: 2%;
+    }
+
+    .car-above .halo-2 {
+        position: absolute;
+        right: 58%;
+        height: 5%;
+        width: 2%;
+       
+    }
+
+    .car-above .halo-3 {
+        position: absolute;
+        right: 58%;
+        height: 4%;
+        width: 1.6%;
+        top: 46%;
+        border-top-left-radius: 60%;
+        
+    }
+
+    .car-above .halo-4 {
+        position: absolute;
+        left: 58%;
+        height: 4%;
+        width: 1.6%;
+        top: 46%;
+        border-top-right-radius: 60%;
+        
+    }
+
+    .car-above .halo-5 {
+        position: absolute;
+        right: 54%;
+        height: 5%;
+        width: 2%;
+        top: 42%;
+        transform: rotate(50deg);
+        border-bottom-left-radius: 50%;
+        
+    }
+
+    .car-above .halo-6 {
+        position: absolute;
+        left: 52.6%;
+        height: 5%;
+        width: 2%;
+        top: 42%;
+        transform: rotate(-50deg);
+        border-bottom-right-radius: 50%;
+        
+    }
+
+    .car-above .halo-7 {
+        position: absolute;
+        left: 47.5%;
+        height: 3%;
+        width: 4%;
+        top: 41%;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+    }
+
+.car-above .halo-8 {
+    position: absolute;
+    left: 49%;
+    height: 5%;
+    width: 1%;
+    top: 37%;
+ 
+}
+.car-above .halo:hover +.halo-line {
+    animation: halo-adaptive-anim 1s ease-in-out 1 both;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+@keyframes halo-adaptive-anim {
+    0% {
+    opacity: 0;
+    }
+
+    100% {
+    opacity: 1;
+    }
+}
+
+.car-above .cockpit-line {
+    position: absolute;
+    text-align: left;
+    color: white;
+    top: 47%;
+    left: 5%;
+    right: 50%;
+    border-bottom: 1px solid white;
+    font-size: 7px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.car-above .cockpit{
+    position: absolute;
+    top: 45%;
+    width: 8%;
+    height: 8.6%;
+    left: 45.7%;
+    border-radius: 20%;
+}
+.car-above .cockpit:hover +.cockpit-line {
+    animation: cockpit-adaptive-anim 1s ease-in-out 1 both;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+@keyframes cockpit-adaptive-anim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.car-above .rear-wing-line {
+    position: absolute;
+    text-align: left;
+    color: white;
+    bottom: 3%;
+    left: 0;
+    right: 60%;
+    border-bottom: 1px solid white;
+    font-size: 7px;
+    z-index: -1;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+.car-above .rear-wing {
+    position: absolute;
+    bottom: 2%;
+    width: 29%;
+    height: 9%;
+    left: 35%;
+}
+.car-above .rear-wing:hover +.rear-wing-line {
+    animation: rear-wing-anim 1s ease-in-out 1 both;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+@keyframes rear-wing-anim {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+}

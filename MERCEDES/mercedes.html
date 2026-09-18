@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/MERCEDES/STYLES/mercedes.css">
+    <link rel="stylesheet" href="/MERCEDES/STYLES/adaptive.css">
+    <link rel="stylesheet" href="/MERCEDES/STYLES/drivers.css">
+    <link rel="stylesheet" href="/MERCEDES/STYLES/the-car.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Basic&family=Birthstone&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Oswald:wght@200..700&family=Playwrite+DE+SAS+Guides&family=Prociono&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <title>Mercedes</title>
+</head>
+
+<body>
+    <header style="position: fixed;">
+        <div class="top-bar">
+            <div class="mercedes">Mercedes</div>
+            <div class="mercedes-logo"><img src="/MERCEDES/MERCEDES-MEDIA/LOGO/MERCEDES-LOGO.avif"></div>
+        </div>
+        <div class="top-bar-line"></div>
+    </header>
+    <div id="container">
+        <main>
+            <div class="car-perfomance">
+                <div class="car-name">W17</div>
+                <div class="car-img"><img src="/MERCEDES/MERCEDES-MEDIA/THE-CAR/W17-RIGHT.avif"></div>
+                <div class="line-anim"></div>
+            </div>
+            <div class="car-info-block">
+                <div class="about-text">ABOUT <span class="adap">W17</span>
+                    <div class="about-text-line"></div>
+                </div>
+                <div class="of-on-but"><button>ON/OFF</button></div>
+                <div class="car-above">
+                    <img src="/MERCEDES/MERCEDES-MEDIA/THE-CAR/W17-ABOVE.png">
+
+                    <div class="front-wing"></div>
+                    <div class="front-wing-line">Active Aero Front Wing</div>
+
+                    <div class="left-front-tire"></div>
+                    <div class="left-front-tire-line">Left Front Tire</div>
+
+                    <div class="right-front-tire"></div>
+                    <div class="right-front-tire-line">Right Front Tire</div>
+
+                    <div class="left-rear-tire"></div>
+                    <div class="left-rear-tire-line">Left Rear Tire</div>
+
+                    <div class="right-rear-tire"></div>
+                    <div class="right-rear-tire-line">Right Rear Tire</div>
+
+                    <div class="halo">
+                        <div class="halo-1"></div>
+                        <div class="halo-2"></div>
+                        <div class="halo-3"></div>
+                        <div class="halo-4"></div>
+                        <div class="halo-5"></div>
+                        <div class="halo-6"></div>
+                        <div class="halo-7"></div>
+                        <div class="halo-8"></div>
+                    </div>
+                    <div class="halo-line">Halo</div>
+
+                    <div class="cockpit"></div>
+                    <div class="cockpit-line">Cockpit</div>
+
+                    <div class="rear-wing"></div>
+                    <div class="rear-wing-line">Active Aero Rear Wing</div>
+
+                    <div class="car-line"></div>
+                </div>
+            </div>
+                        <div class="drivers-block">
+                <div class="drivers-text">DRIVERS<div class="drivers-text-line"></div>
+                </div>
+                <div class="drivers">
+                    <div class="russel">
+                        <div class="drivers-img">
+                            <img src="/MERCEDES/MERCEDES-MEDIA/DRIVERS/RUSSEL.avif">
+                            <div class="driver-name">George</div>
+                            <div class="driver-lastname">RUSSEL</div>
+                        </div>
+                        <div class="flag">
+                            <img src="/MERCEDES/MERCEDES-MEDIA/FLAGS/UK-FLAG.png" alt="flag-of-UK">
+                        </div>
+                        <div class="num">
+                            <img src="/MERCEDES/MERCEDES-MEDIA/NUMBERS/63.avif" alt="GR-NUMBER-63">
+                        </div>
+                        <div class="rus-background">
+                            <div class="rus-1">RUS</div>
+                            <div class="rus-2">RUS</div>
+                            <div class="rus-3">RUS</div>
+                            <div class="rus-4">RUS</div>
+                        </div>
+                    </div>
+                    <div class="antonelli">
+                        <div class="drivers-img">
+                            <img src="/MERCEDES/MERCEDES-MEDIA/DRIVERS/ANTONELLI.avif">
+                            <div class="driver-name">Kimi</div>
+                            <div class="driver-lastname">ANTONELLI</div>
+                        </div>
+                        <div class="flag">
+                            <img src="/MERCEDES/MERCEDES-MEDIA/FLAGS/ITALY.png" alt="flag-of-ITALY">
+                        </div>
+                        <div class="num">
+                            <img src="/MERCEDES/MERCEDES-MEDIA/NUMBERS/12.avif" alt="KA-NUMBER-12">
+                        </div>
+                        <div class="ant-background">
+                            <div class="ant-1">ANT</div>
+                            <div class="ant-2">ANT</div>
+                            <div class="ant-3">ANT</div>
+                            <div class="ant-4">ANT</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="driver-line"></div>
+            </div>
+        </main>            <div class="home-but">
+                <button onclick="window.location.href='../MAIN PAGE/index.html'">HOME</button>
+            </div>
+    </div>
+    </main>
+    </div>
+
+    <script>
+        // Toggle all lines visibility and hover effect
+        const button = document.querySelector('.of-on-but button');
+        const carAbove = document.querySelector('.car-above');
+
+        button.addEventListener('click', function () {
+            carAbove.classList.toggle('lines-visible');
+        });
+    </script>
+</body>
+
+</html>
